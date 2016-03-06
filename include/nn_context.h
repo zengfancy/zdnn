@@ -1,11 +1,16 @@
 #ifndef __ZDNN_CONTEXT__
 #define __ZDNN_CONTEXT__
 
+#include "node.h"
+
 namespace zdnn {
+
+class Layer;
 
 class NNContext {
   public:
-    NNContext(Layer* layers, int layer_size);
+    NNContext(Layer* layers, int layer_size, int batch);
+    virtual ~NNContext();
 
   public:
     Node* output_nodes_;

@@ -8,10 +8,10 @@ Node::Node(int dim, int batch) {
 }
 
 Node::Node() {
-  delete [] in_value;
-  delete [] out_value;
-  delete [] in_error;
-  delete [] out_error;
+  delete [] in_value_;
+  delete [] out_value_;
+  delete [] in_error_;
+  delete [] out_error_;
 }
 
 void Node::Init(int dim, int batch) {

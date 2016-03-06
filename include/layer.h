@@ -1,6 +1,9 @@
 #ifndef __ZDNN_LAYER__
 #define __ZDNN_LAYER__
 
+#include "activate.h"
+#include "node.h"
+
 namespace zdnn {
 
 class Layer {
@@ -17,7 +20,8 @@ class Layer {
     double* delta_w_;
     double* delta_b_;
 
-    Activation* actviate_;
+    Activation* activate_;
+    double learning_rate_;
 };
 
 }
